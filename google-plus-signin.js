@@ -24,6 +24,7 @@ angular.module('directive.g+signin', []).
       // If offline access is needed, add that in if the attribute is set
       if ('offlineaccess' in attrs) {
         attrs.$set('data-accesstype', 'offline');
+        attrs.$set('data-redirecturi', 'postmessage');
       }
 
       var scopes = 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email';
